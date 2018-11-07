@@ -1,0 +1,108 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/niqiw/Desktop/calibration/axi_ram_test
+T_opt
+!s110 1541555441
+V>=<IQlllbHA?l8GlW2Mcg3
+04 4 4 work test fast 0
+=1-2089848c219c-5be244f1-1e2-15bc
+Z1 o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+Z2 OL;O;10.4;61
+T_opt1
+!s110 1541509673
+VN><``@ER:NYXk:cQWX^kF2
+04 13 4 work CoordinateGen fast 0
+=1-2089848c219c-5be19229-12c-40c
+R1
+n@_opt1
+R2
+R0
+vaxi_ram
+Z3 !s110 1541554066
+!i10b 1
+!s100 ElVkM@8hUoEXK9SlM1dZX2
+IWefMoQg<<`h4LA=6aEX1Z3
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 dF:/TEST/Graduation_Rectify/axi_read_test
+w1541511327
+8F:/TEST/Graduation_Rectify/axi_read_test/axi_ram.v
+FF:/TEST/Graduation_Rectify/axi_read_test/axi_ram.v
+Z6 L0 32
+Z7 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1541554066.601000
+!s107 F:/TEST/Graduation_Rectify/axi_read_test/axi_ram.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/TEST/Graduation_Rectify/axi_read_test/axi_ram.v|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vCoordinateGen
+R3
+!i10b 1
+!s100 Rk3WKm4Q3KlAzG6R^k95B1
+Iag^kEhL8QziDi:0Q8lU1P3
+R4
+R5
+w1537533004
+8F:/TEST/Graduation_Rectify/axi_read_test/CoordinateGen.v
+FF:/TEST/Graduation_Rectify/axi_read_test/CoordinateGen.v
+L0 23
+R7
+r1
+!s85 0
+31
+!s108 1541554066.709000
+!s107 F:/TEST/Graduation_Rectify/axi_read_test/CoordinateGen.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/TEST/Graduation_Rectify/axi_read_test/CoordinateGen.v|
+!i113 0
+R8
+n@coordinate@gen
+vtest
+R3
+!i10b 1
+!s100 zDX=C8eI8?8ez@PH8L92D0
+I:YOmm>G[2k>NoH9[3C;eB0
+R4
+R5
+w1541511387
+8F:/TEST/Graduation_Rectify/axi_read_test/test.v
+FF:/TEST/Graduation_Rectify/axi_read_test/test.v
+R6
+R7
+r1
+!s85 0
+31
+!s108 1541554066.832000
+!s107 F:/TEST/Graduation_Rectify/axi_read_test/test.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/TEST/Graduation_Rectify/axi_read_test/test.v|
+!i113 0
+R8
+vtop
+!s110 1541554778
+!i10b 1
+!s100 zJhULcN`J5KeSnN8Ibea20
+Ikf9hCMRaKUVgziEU?2`l31
+R4
+R5
+w1541554365
+8F:/TEST/Graduation_Rectify/axi_read_test/top.v
+FF:/TEST/Graduation_Rectify/axi_read_test/top.v
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1541554778.924000
+!s107 F:/TEST/Graduation_Rectify/axi_read_test/top.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|F:/TEST/Graduation_Rectify/axi_read_test/top.v|
+!i113 0
+R8
