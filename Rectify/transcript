@@ -1,0 +1,74 @@
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+puts {hello}
+vmap -del work
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet -del work 
+# Removing reference to logical library work
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+vdel -all -lib work
+do sim.tcl
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 16:00:08 on Nov 12,2018
+# vlog -reportprogress 300 -work work axi_ram.v coor_warper.v fetch.v rectify.v rectify_tb.v 
+# -- Compiling module axi_ram
+# -- Compiling module coor_warper
+# -- Compiling module fetch
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 16:00:08 on Nov 12,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 16:00:08 on Nov 12,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Warning: rectify_tb.v(135): (vopt-2685) [TFMPC] - Too few port connections for 'u_fetch'.  Expected 32, found 27.
+# 
+# ** Warning: rectify_tb.v(135): (vopt-2718) [TFMPC] - Missing connection for port 's_axis_aresetn'.
+# 
+# ** Warning: rectify_tb.v(135): (vopt-2718) [TFMPC] - Missing connection for port 's_axis_aclk'.
+# 
+# ** Warning: rectify_tb.v(135): (vopt-2718) [TFMPC] - Missing connection for port 'm_axis_aresetn'.
+# 
+# ** Warning: rectify_tb.v(135): (vopt-2718) [TFMPC] - Missing connection for port 'm_axis_aclk'.
+# 
+# ** Warning: rectify_tb.v(135): (vopt-2718) [TFMPC] - Missing connection for port 'state_out'.
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "fetch(fast)".
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "coor_warper(fast)".
+# 
+# Loading work.test(fast)
+# Loading work.fetch(fast)
+# Loading work.axi_ram(fast)
+# Loading work.coor_warper(fast)
+# ** Warning: (vsim-3015) rectify_tb.v(135): [PCDPC] - Port size (32) does not match connection size (16) for port 'm_axi_araddr'. The port definition is at: fetch.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /test/u_fetch File: fetch.v
+# ** Warning: (vsim-3015) rectify_tb.v(178): [PCDPC] - Port size (1) does not match connection size (32) for port 's_axi_awlock'. The port definition is at: axi_ram.v(48).
+#    Time: 0 ps  Iteration: 0  Instance: /test/UUT File: axi_ram.v
+# ** Warning: (vsim-3015) rectify_tb.v(178): [PCDPC] - Port size (4) does not match connection size (32) for port 's_axi_awcache'. The port definition is at: axi_ram.v(49).
+#    Time: 0 ps  Iteration: 0  Instance: /test/UUT File: axi_ram.v
+# ** Warning: (vsim-3015) rectify_tb.v(178): [PCDPC] - Port size (3) does not match connection size (32) for port 's_axi_awprot'. The port definition is at: axi_ram.v(50).
+#    Time: 0 ps  Iteration: 0  Instance: /test/UUT File: axi_ram.v
+add wave -position insertpoint  \
+sim:/test/u_fetch/m_axi_arsize
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf F:/TEST/Graduation_Rectify/Rectify/wave.do
+# End time: 16:12:05 on Nov 12,2018, Elapsed time: 0:11:57
+# Errors: 0, Warnings: 10

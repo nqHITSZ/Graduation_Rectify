@@ -7,111 +7,93 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/niqiw/Desktop/calibration/axi_ram_test
+Z0 dF:/TEST/Graduation_Rectify/axi_read_test
 T_opt
-!s110 1541590309
-VGzdIJXTRX_1?00Dg5biLj0
-Z1 04 4 4 work test fast 0
-=1-2089848c219c-5be2cd25-2a6-6c8
-Z2 o-quiet -auto_acc_if_foreign -work work +acc
+!s110 1541760247
+Vg9DijE;L^YN_KnL:N4Vb41
+04 4 4 work test fast 0
+=1-2089848c219c-5be564f6-319-2a5c
+o-quiet -auto_acc_if_foreign -work work +acc
 n@_opt
-Z3 OL;O;10.4;61
-T_opt1
-!s110 1541509673
-VN><``@ER:NYXk:cQWX^kF2
-04 13 4 work CoordinateGen fast 0
-=1-2089848c219c-5be19229-12c-40c
-R2
-n@_opt1
-R3
-R0
-T_opt2
-!s110 1541559650
-VS1K51XbDa^L`:8Q^nR<EE0
-R1
-=1-2089848c219c-5be25562-1a6-4118
-o-quiet -auto_acc_if_foreign -work work -L work
-n@_opt2
-R3
-R0
+OL;O;10.4;61
 vaxi_ram
-Z4 !s110 1541590307
+Z1 !s110 1541760245
 !i10b 1
 !s100 ElVkM@8hUoEXK9SlM1dZX2
 IIDDSFVTczB25NTUW@7fIC1
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 dF:/TEST/Graduation_Rectify/axi_read_test
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
 w1541511327
 8axi_ram.v
 Faxi_ram.v
-Z7 L0 32
-Z8 OL;L;10.4;61
+Z3 L0 32
+Z4 OL;L;10.4;61
 r1
 !s85 0
 31
-Z9 !s108 1541590307.809000
-Z10 !s107 test.v|CoordinateGen.v|axi_ram.v|top.v|
-Z11 !s90 -reportprogress|300|top.v|axi_ram.v|CoordinateGen.v|test.v|
+Z5 !s108 1541760245.155000
+Z6 !s107 fetch_tb.v|CoordinateGen.v|axi_ram.v|fetch.v|
+Z7 !s90 -reportprogress|300|fetch.v|axi_ram.v|CoordinateGen.v|fetch_tb.v|
 !i113 0
-Z12 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vCoordinateGen
-R4
+R1
 !i10b 1
 !s100 Rk3WKm4Q3KlAzG6R^k95B1
 IZgi90Q1i3kIZ<o>jzf1_X1
-R5
-R6
+R2
+R0
 w1537533004
 8CoordinateGen.v
 FCoordinateGen.v
 L0 23
-R8
+R4
 r1
 !s85 0
 31
-R9
-R10
-R11
-!i113 0
-R12
-n@coordinate@gen
-vtest
-R4
-!i10b 1
-!s100 T4O_<5HAIfAkm`6cWZVdZ1
-IgOR_];?:4J:FH:T6S`_FV3
 R5
 R6
-w1541590017
-8test.v
-Ftest.v
 R7
+!i113 0
 R8
+n@coordinate@gen
+vfetch
+R1
+!i10b 1
+!s100 :EgdfUgXdFHZSn`NYUWK^0
+Ic:WQ2=?WF?C8D;m7<>Q6P2
+R2
+R0
+w1541760191
+8fetch.v
+Ffetch.v
+L0 4
+R4
 r1
 !s85 0
 31
-R9
-R10
-R11
-!i113 0
-R12
-vtop
-R4
-!i10b 1
-!s100 haHN0XoQaJi>NK7h?L0:k0
-IonD7Jd:570h>zMMDAOQK<2
 R5
 R6
-w1541590288
-8top.v
-Ftop.v
-L0 3
+R7
+!i113 0
 R8
+vtest
+R1
+!i10b 1
+!s100 Eo9aKJ2P^QdXaf9mJ3ha^0
+IaaFYdo1`]ICo`e70:n8_f0
+R2
+R0
+w1541753207
+8fetch_tb.v
+Ffetch_tb.v
+R3
+R4
 r1
 !s85 0
 31
-R9
-R10
-R11
+R5
+R6
+R7
 !i113 0
-R12
+R8

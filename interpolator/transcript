@@ -1,0 +1,283 @@
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+quit -sim
+#vmap -del work
+#vdel -all -lib work
+.main clear
+
+vlib work
+vmap work ./work
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+
+vlog -work work interpolator.v
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:02:14 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator.v 
+# -- Compiling module interpolator
+# ** Error: (vlog-13069) interpolator.v(98): near "endmodule": syntax error, unexpected endmodule, expecting ';' or ','.
+# 
+# End time: 20:02:15 on Nov 13,2018, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# C:/modeltech64_10.4/win64/vlog failed.
+vlog -work work interpolator.v
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:02:45 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator.v 
+# -- Compiling module interpolator
+# 
+# Top level modules:
+# 	interpolator
+# End time: 20:02:45 on Nov 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:28:43 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator.v 
+# ** Error: (vlog-7) Failed to open design unit file "interpolator.v" in read mode.
+# 
+# No such file or directory. (errno = ENOENT)
+# End time: 20:28:43 on Nov 13,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/modeltech64_10.4/win64/vlog failed.
+# Error in macro ./sim.tcl line 9
+# C:/modeltech64_10.4/win64/vlog failed.
+#     while executing
+# "vlog -work work interpolator.v"
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:29:39 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator_raw.v raw_test.v 
+# -- Compiling module interpolator_raw
+# ** Error: interpolator_raw.v(91): (vlog-2730) Undefined variable: 'mul_a'.
+# 
+# ** Error: interpolator_raw.v(91): (vlog-2730) Undefined variable: 'mul_b'.
+# 
+# ** Error: interpolator_raw.v(91): (vlog-2730) Undefined variable: 'mul_c'.
+# 
+# ** Error: interpolator_raw.v(91): (vlog-2730) Undefined variable: 'mul_d'.
+# 
+# -- Compiling module test
+# ** Error: (vlog-13069) raw_test.v(46): near "reg": syntax error, unexpected reg, expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# 
+# ** Error: raw_test.v(54): (vlog-2730) Undefined variable: 'PERIOD'.
+# 
+# ** Error: raw_test.v(65): (vlog-2730) Undefined variable: 'dx'.
+# 
+# ** Error: raw_test.v(66): (vlog-2730) Undefined variable: 'dy'.
+# 
+# ** Error: raw_test.v(67): (vlog-2730) Undefined variable: 'lu'.
+# 
+# ** Error: raw_test.v(68): (vlog-2730) Undefined variable: 'ru'.
+# 
+# ** Error: raw_test.v(69): (vlog-2730) Undefined variable: 'ld'.
+# 
+# ** Error: raw_test.v(70): (vlog-2730) Undefined variable: 'rd'.
+# 
+# End time: 20:29:39 on Nov 13,2018, Elapsed time: 0:00:00
+# Errors: 12, Warnings: 0
+# ** Error: C:/modeltech64_10.4/win64/vlog failed.
+# Error in macro ./sim.tcl line 9
+# C:/modeltech64_10.4/win64/vlog failed.
+#     while executing
+# "vlog -work work interpolator_raw.v raw_test.v"
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:30:27 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator_raw.v raw_test.v 
+# -- Compiling module interpolator_raw
+# -- Compiling module test
+# ** Error: (vlog-13069) raw_test.v(46): near "reg": syntax error, unexpected reg, expecting IDENTIFIER or TYPE_IDENTIFIER or NETTYPE_IDENTIFIER.
+# 
+# ** Error: raw_test.v(54): (vlog-2730) Undefined variable: 'PERIOD'.
+# 
+# ** Error: raw_test.v(65): (vlog-2730) Undefined variable: 'dx'.
+# 
+# ** Error: raw_test.v(66): (vlog-2730) Undefined variable: 'dy'.
+# 
+# ** Error: raw_test.v(67): (vlog-2730) Undefined variable: 'lu'.
+# 
+# ** Error: raw_test.v(68): (vlog-2730) Undefined variable: 'ru'.
+# 
+# ** Error: raw_test.v(69): (vlog-2730) Undefined variable: 'ld'.
+# 
+# ** Error: raw_test.v(70): (vlog-2730) Undefined variable: 'rd'.
+# 
+# End time: 20:30:27 on Nov 13,2018, Elapsed time: 0:00:00
+# Errors: 8, Warnings: 0
+# ** Error: C:/modeltech64_10.4/win64/vlog failed.
+# Error in macro ./sim.tcl line 9
+# C:/modeltech64_10.4/win64/vlog failed.
+#     while executing
+# "vlog -work work interpolator_raw.v raw_test.v"
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:31:08 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator_raw.v raw_test.v 
+# -- Compiling module interpolator_raw
+# -- Compiling module test
+# ** Error: raw_test.v(46): (vlog-2730) Undefined variable: 'D_width'.
+# 
+# End time: 20:31:08 on Nov 13,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/modeltech64_10.4/win64/vlog failed.
+# Error in macro ./sim.tcl line 9
+# C:/modeltech64_10.4/win64/vlog failed.
+#     while executing
+# "vlog -work work interpolator_raw.v raw_test.v"
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:31:43 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator_raw.v raw_test.v 
+# -- Compiling module interpolator_raw
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 20:31:43 on Nov 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:31:43 on Nov 13,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# Loading work.test(fast)
+# Loading work.interpolator_raw(fast)
+# ** Error: Cannot open macro file: wave.do
+# Error in macro ./sim.tcl line 11
+# Cannot open macro file: wave.do
+#     while executing
+# "do wave.do"
+add wave -position insertpoint sim:/test/*
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf F:/TEST/Graduation_Rectify/interpolator/wave.do
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:32:16 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator_raw.v raw_test.v 
+# -- Compiling module interpolator_raw
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 20:32:16 on Nov 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:32:16 on Nov 13,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading work.test(fast)
+# Loading work.interpolator_raw(fast)
+add wave -position insertpoint sim:/test/u_interpo/*
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf F:/TEST/Graduation_Rectify/interpolator/wave.do
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:34:15 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator_raw.v raw_test.v 
+# -- Compiling module interpolator_raw
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 20:34:15 on Nov 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:34:15 on Nov 13,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# 
+# Loading work.test(fast)
+# Loading work.interpolator_raw(fast)
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf F:/TEST/Graduation_Rectify/interpolator/wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf F:/TEST/Graduation_Rectify/interpolator/wave.do
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:45:42 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator_raw.v raw_test.v 
+# -- Compiling module interpolator_raw
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 20:45:42 on Nov 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:45:42 on Nov 13,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading work.test(fast)
+# Loading work.interpolator_raw(fast)
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 20:51:41 on Nov 13,2018
+# vlog -reportprogress 300 -work work interpolator_raw.v raw_test.v 
+# -- Compiling module interpolator_raw
+# -- Compiling module test
+# 
+# Top level modules:
+# 	test
+# End time: 20:51:41 on Nov 13,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 20:51:41 on Nov 13,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# Loading work.test(fast)
+# Loading work.interpolator_raw(fast)
+# End time: 21:37:06 on Nov 13,2018, Elapsed time: 0:45:25
+# Errors: 0, Warnings: 0
