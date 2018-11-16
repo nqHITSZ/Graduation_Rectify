@@ -1,0 +1,100 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/TEST/Graduation_Rectify/Fetch
+T_opt
+!s110 1542377342
+VZfA0cUXan<I9fXW0SaiBB3
+04 4 4 work test fast 0
+=1-2089848c219c-5beecf7d-376-17cc
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.4;61
+vbram_sd
+Z1 !s110 1542377340
+!i10b 1
+!s100 zQWPDl5[gR30]c;]K`a;E2
+IUGWnSlR5iC3m0V;iI8>5?3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1535364298
+8bram_sd.v
+Fbram_sd.v
+L0 23
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+Z4 !s108 1542377339.996000
+Z5 !s107 bram_sd.v|Img_Buf.v|Fetch_tb.v|Fetch.v|
+Z6 !s90 -reportprogress|300|-work|work|Fetch.v|Fetch_tb.v|Img_Buf.v|bram_sd.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vFetch
+R1
+!i10b 1
+!s100 N>H4_9f9ATg379A4SQm100
+I;NJb=oK6MbhMMdSKSC<DF3
+R2
+R0
+w1542377325
+8Fetch.v
+FFetch.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+n@fetch
+vImg_Buf
+R1
+!i10b 1
+!s100 NoS6oK;8o=797KW:`?c]H3
+ImdZOFdi[mTHl^8_AkQ@Lg0
+R2
+R0
+w1542377027
+8Img_Buf.v
+FImg_Buf.v
+L0 22
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
+n@img_@buf
+vtest
+R1
+!i10b 1
+!s100 [D=YggU@>6FVXgGTRb?l83
+ImVWf1zY4ffM=i9U54[j1Z3
+R2
+R0
+w1542375763
+8Fetch_tb.v
+FFetch_tb.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7
