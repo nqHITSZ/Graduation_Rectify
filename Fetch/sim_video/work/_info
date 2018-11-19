@@ -1,0 +1,58 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dF:/TEST/Graduation_Rectify/Fetch/sim_video
+T_opt
+!s110 1542455529
+VXmV@BYDEb=7hbjBd588U83
+04 4 4 work test fast 0
+=1-2089848c219c-5bf000e9-1d8-3d6c
+o-quiet -auto_acc_if_foreign -work work +acc
+n@_opt
+OL;O;10.4;61
+vsim_video
+Z1 !s110 1542455527
+!i10b 1
+!s100 8bb=G>]eQCag9@d;Y8foO2
+Im:hclEdDMS9N7;`nO?[OC2
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1542455515
+8sim_video.v
+Fsim_video.v
+L0 3
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+Z4 !s108 1542455527.727000
+Z5 !s107 test.v|sim_video.v|
+Z6 !s90 -reportprogress|300|-work|work|sim_video.v|test.v|
+!i113 0
+Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vtest
+R1
+!i10b 1
+!s100 W80Oja<0X?<9Q9A<m^3410
+IbfbH85FCF`FaLXoH>C]^61
+R2
+R0
+w1542455046
+8test.v
+Ftest.v
+L0 32
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+R7

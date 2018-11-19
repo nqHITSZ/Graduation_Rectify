@@ -9,21 +9,21 @@ z2
 cModel Technology
 Z0 dF:/TEST/Graduation_Rectify/Axi_FIFO
 T_opt
-!s110 1542018161
-V4LlCVTZI2FAk^1jP^8HhF1
+!s110 1542610046
+VRMoh<eiX:NNA]d05`X:aS1
 04 4 4 work test fast 0
-=1-2089848c219c-5be95470-394-29ac
+=1-2089848c219c-5bf25c7e-22b-3b1c
 o-quiet -auto_acc_if_foreign -work work +acc
 n@_opt
 OL;O;10.4;61
 vaxis_fifo
-Z1 !s110 1542018159
+Z1 !s110 1542610044
 !i10b 1
-!s100 8V0ik3o]__GC5zAXed_][3
-IHcR5eg?GXYM0CKjLTDR<N0
+!s100 ^_]z6SP5@hL=9W:WWgl@R3
+I33gVz<Z@1JK7^f@`E:Qz13
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1542012918
+w1542591522
 8axis_fifo.v
 Faxis_fifo.v
 Z3 L0 32
@@ -31,7 +31,7 @@ Z4 OL;L;10.4;61
 r1
 !s85 0
 31
-Z5 !s108 1542018159.336000
+Z5 !s108 1542610044.886000
 Z6 !s107 fifo_test.v|axis_fifo.v|
 Z7 !s90 -reportprogress|300|-work|work|axis_fifo.v|fifo_test.v|
 !i113 0
@@ -39,11 +39,11 @@ Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 vtest
 R1
 !i10b 1
-!s100 @[RVM`h@G?BX4gmgFZG1F1
-I0XHm]DBDl]5LZi0_KCbd:0
+!s100 8VAMSaI3k9?7CmJ<6Ao^02
+I_BaUcL9>j<f::TXHm=mnL2
 R2
 R0
-w1542018149
+w1542610038
 8fifo_test.v
 Ffifo_test.v
 R3

@@ -58,7 +58,7 @@ initial begin
 end
 
 
-
+integer i = 13;
 //SLAVE
 initial begin
     rst = 1'b1;
@@ -74,31 +74,31 @@ initial begin
         s_axis_tlast <= #(Tc2o) 0;
         s_axis_tvalid <= #(Tc2o) 1;
     end
-    #(2) wait(m_axis_tready);
+    #(2) wait(s_axis_tready);
         @(posedge clk) begin
         s_axis_tdata <= #(Tc2o) 2;
         s_axis_tlast <= #(Tc2o) 0;
         s_axis_tvalid <= #(Tc2o) 1;
     end
-    #(2) wait(m_axis_tready);
+    #(2) wait(s_axis_tready);
     @(posedge clk) begin
         s_axis_tdata <= #(Tc2o) 3;
         s_axis_tlast <= #(Tc2o) 0;
         s_axis_tvalid <= #(Tc2o) 1;
     end
-    #(2) wait(m_axis_tready);
+    #(2) wait(s_axis_tready);
     @(posedge clk) begin
         s_axis_tdata <= #(Tc2o) 4;
         s_axis_tlast <= #(Tc2o) 0;
         s_axis_tvalid <= #(Tc2o) 1;
     end
-    #(2) wait(m_axis_tready);
+    #(2) wait(s_axis_tready);
     @(posedge clk) begin
         s_axis_tdata <= #(Tc2o) 5;
         s_axis_tlast <= #(Tc2o) 0;
         s_axis_tvalid <= #(Tc2o) 1;
     end
-    #(2) wait(m_axis_tready);
+    #(2) wait(s_axis_tready);
     @(posedge clk) begin
         s_axis_tdata <= #(Tc2o) 6;
         s_axis_tlast <= #(Tc2o) 1;
@@ -106,38 +106,61 @@ initial begin
     end
     
     
-    #(2) wait(m_axis_tready);
+    #(2) wait(s_axis_tready);
     @(posedge clk) begin
         s_axis_tdata <= #(Tc2o) 32'ha;
         s_axis_tlast <= #(Tc2o) 0;
         s_axis_tvalid <= #(Tc2o) 1;
     end
-    #(2) wait(m_axis_tready);
+    #(2) wait(s_axis_tready);
     @(posedge clk) begin
         s_axis_tdata <= #(Tc2o) 32'hb;
         s_axis_tlast <= #(Tc2o) 0;
         s_axis_tvalid <= #(Tc2o) 1;
     end
-    #(2) wait(m_axis_tready);
+    #(2) wait(s_axis_tready);
     @(posedge clk) begin
         s_axis_tdata <= #(Tc2o) 32'hc;
         s_axis_tlast <= #(Tc2o) 1;
         s_axis_tvalid <= #(Tc2o) 1;
     end
-
-
- 
+    repeat(10) begin
+        #(2) wait(s_axis_tready);
+        @(posedge clk) begin
+            s_axis_tdata <= #(Tc2o) i;
+            i=i+1;
+            s_axis_tlast <= #(Tc2o) 0;
+            s_axis_tvalid <= #(Tc2o) 1;
+        end
+    end
+    repeat(7) begin
+        @(posedge clk)
+            s_axis_tvalid <= #(Tc2o) 0;
+    end
     
+    repeat(10) begin
+    #(2) wait(s_axis_tready);
+    @(posedge clk) begin
+        s_axis_tdata <= #(Tc2o) i;
+        i=i+1;
+        s_axis_tlast <= #(Tc2o) 0;
+        s_axis_tvalid <= #(Tc2o) 1;
+    end
+    end
+    @(posedge clk) begin
+        s_axis_tvalid <= #(Tc2o) 0;
+    end
+
 end
 
 //MASTER
 initial begin
     m_axis_tready = 1'b0;
     repeat(15) @(posedge clk);
-    repeat(15) @(posedge clk) begin
+    repeat(18) @(posedge clk) begin
         m_axis_tready <= #(Tc2o) 1;
     end
-    repeat(5) @(posedge clk) begin
+    repeat(10) @(posedge clk) begin
         m_axis_tready <= #(Tc2o) 0;
     end
     @(posedge clk)

@@ -15,10 +15,15 @@ end
 
 reg [9:0] wx,wy;
 reg [9:0] rx,ry;
+wire signed [9:0] xint,yint;
 wire [7:0] lu,ru,ld,rd;
 reg w_en;
+wire Flast;
 wire [7:0] pixel;
 assign pixel = {wy[3:0],wx[3:0]};
+assign Flast = wy==9 && wx==15;
+assign xint = wx>8 ? 2 : 3;
+assign yint = wy>4 ? 1 : -2;
 
 initial begin
     rst = 1;
@@ -63,6 +68,9 @@ uF
     .rst(rst),
     .tdata(pixel),
     .tvalid(w_en),
+    .Flast(Flast),
+    .yint(yint),
+    .xint(xint),
     .lu(lu),
     .ru(ru),
     .ld(ld),

@@ -66,7 +66,7 @@ assign temp_addr_d = temp_addr_b + 1;
 
 //Address Gen begin
 //READ ADDR 1
-always @* begin
+always @ * begin
     case({iseven(ry),iseven(rx)})
         2'b11: raddr1 = temp_addr_a;
         2'b10: raddr1 = temp_addr_c;
@@ -75,7 +75,7 @@ always @* begin
     endcase
 end
 //READ ADDR 2
-always @* begin
+always @ * begin
     case({iseven(ry),iseven(rx)})
         2'b11: raddr2 = temp_addr_a;
         2'b10: raddr2 = temp_addr_a;
@@ -84,7 +84,7 @@ always @* begin
     endcase
 end
 //READ ADDR 3
-always @* begin
+always @ * begin
     case({iseven(ry),iseven(rx)})
         2'b11: raddr3 = temp_addr_a;
         2'b10: raddr3 = temp_addr_c;
@@ -93,7 +93,7 @@ always @* begin
     endcase
 end
 //READ ADDR 4
-always @* begin
+always @ * begin
     case({iseven(ry),iseven(rx)})
         2'b11: raddr4 = temp_addr_a;
         2'b10: raddr4 = temp_addr_a;
