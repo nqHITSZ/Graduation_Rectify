@@ -6,14 +6,25 @@ module Fetch #(
 (
     input clk, rst,
     input Fsync,
-    input [9:0] yint, xint,
-    input [7:0] tdata,
-    input tvalid,
-    input Flast,//
+
+    //video interface / AXI stream slave
+    input [7:0] vtdata,
+    input vtvalid,
+    input vtlast,
+    output vtready,
+    
+    //LUT interface / AXI stream slave
+    input [7:0] ltdata,
+    input ltvalid,
+    input ltlast,
+    output reg ltready,
+
+    //output
     output [7:0] lu,ru,ld,rd
 );
 localparam BUF_height = 6;
 //write pointer begin
+wire buf_we;
 reg [9:0] wy_pointer, wx_pointer;
 always @ (posedge clk) begin
     if(rst) begin
@@ -21,12 +32,14 @@ always @ (posedge clk) begin
         wx_pointer <= 0;
     end
     else begin
-        if(tvalid) begin
+        if(vtvalid && vtready) begin
             if(wx_pointer==(img_width-1)) wy_pointer <= (wy_pointer==(BUF_height-1))? 0 : wy_pointer+1;
             wx_pointer <= (wx_pointer==(img_width-1))? 0 : wx_pointer+1;
         end
     end
 end
+assign vtready = 1;
+assign buf_we = vtvalid && vtready;
 //write pointer end
 
 //read pointer begin
@@ -55,7 +68,9 @@ localparam IDEL = 0,
            READ_TAIL = 2,
            DONE = 7;
 reg [3:0]state;
-
+wire [9:0] yint, xint;
+assign yint = $signed(ltdata[7:4]);
+assign xint = $signed(ltdata[3:0]);
 always @ (posedge clk) begin
     if(rst) begin
         state <= IDEL;
@@ -64,14 +79,15 @@ always @ (posedge clk) begin
     else begin
         case(state)
             IDEL: begin
-                if(wy_pointer==1 && wx_pointer==15) begin
+                if(wy_pointer==3 && wx_pointer==7) begin
                     state <= READ;
                 end
             end
             READ: begin
-                if(Flast && tvalid) begin
+                if(vtready && vtlast && vtvalid) begin
                     state <= READ_TAIL;
                 end
+                
             end
             READ_TAIL: begin
                 if(ry_pointer==3 && rx_pointer==14) begin
@@ -84,14 +100,16 @@ always @ (posedge clk) begin
     end
 end
 always @ * begin
+        ltready = 0;
         case(state)
             IDEL: begin
                 rp_inc_en = 0;
                 rp_clr = 1;
             end
             READ: begin
-                rp_inc_en = tvalid;
+                rp_inc_en = (vtready && vtvalid);
                 rp_clr = 0;
+                ltready = (vtready && vtvalid);
             end
             READ_TAIL: begin
                 rp_inc_en = 1;
@@ -142,8 +160,8 @@ Img_Buf
 u_BUF
 (
     .clk(clk),
-    .pixel(tdata),
-    .w_en(tvalid),
+    .pixel(vtdata),
+    .w_en(vtvalid),
     .wx(wx_pointer),
     .wy(wy_pointer),
     .rx(rx),
