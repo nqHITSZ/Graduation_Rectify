@@ -1,0 +1,754 @@
+# //  ModelSim SE-64 10.4 Dec  3 2014 
+# //
+# //  Copyright 1991-2014 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND PROPRIETARY INFORMATION
+# //  WHICH IS THE PROPERTY OF MENTOR GRAPHICS CORPORATION OR ITS
+# //  LICENSORS AND IS SUBJECT TO LICENSE TERMS.
+# //  THIS DOCUMENT CONTAINS TRADE SECRETS AND COMMERCIAL OR FINANCIAL
+# //  INFORMATION THAT ARE PRIVILEGED, CONFIDENTIAL, AND EXEMPT FROM
+# //  DISCLOSURE UNDER THE FREEDOM OF INFORMATION ACT, 5 U.S.C. SECTION 552.
+# //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
+# //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
+# //
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 14:01:24 on Nov 22,2018
+# vlog -reportprogress 300 -work work CoordinateGen_2.v Fetch.v Fetch_tb.v Img_Buf.v _latency.v bram_sd.v frac_latency.v interpolator_raw.v sim_lut.v sim_video_307200.v sim_video_uncontinute.v 
+# -- Compiling module CoordinateGen_2
+# -- Compiling module Fetch
+# -- Compiling module test
+# -- Compiling module Img_Buf
+# -- Compiling module _latency
+# -- Compiling module bram_sd
+# -- Compiling module frac_latency
+# -- Compiling module interpolator_raw
+# -- Compiling module sim_lut
+# -- Compiling module sim_video_307200
+# -- Compiling module sim_video_uncon
+# 
+# Top level modules:
+# 	test
+# 	sim_video_uncon
+# End time: 14:01:24 on Nov 22,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 14:01:25 on Nov 22,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "Fetch(fast)".
+# 
+# ** Warning: Fetch_tb.v(68): (vopt-2685) [TFMPC] - Too few port connections for 'uF'.  Expected 20, found 17.
+# 
+# ** Warning: Fetch_tb.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'ptready'.
+# 
+# ** Warning: Fetch_tb.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'ptlast'.
+# 
+# ** Warning: Fetch_tb.v(68): (vopt-2718) [TFMPC] - Missing connection for port 'Fsync'.
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "sim_lut(fast)".
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "sim_video_307200(fast)".
+# 
+# Loading work.test(fast)
+# Loading work.Fetch(fast)
+# Loading work.Img_Buf(fast)
+# Loading work.bram_sd(fast)
+# Loading work._latency(fast)
+# Loading work.frac_latency(fast)
+# Loading work.interpolator_raw(fast)
+# Loading work._latency(fast__1)
+# Loading work.sim_video_307200(fast)
+# Loading work.sim_lut(fast)
+# Loading work.CoordinateGen_2(fast)
+# ** Warning: (vsim-3015) Fetch.v(196): [PCDPC] - Port size (10) does not match connection size (11) for port 'wx'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(196): [PCDPC] - Port size (10) does not match connection size (11) for port 'wy'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(196): [PCDPC] - Port size (10) does not match connection size (11) for port 'rx'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(196): [PCDPC] - Port size (10) does not match connection size (11) for port 'ry'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Img_Buf.v(169): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram1 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(183): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram2 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(197): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram3 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(211): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram4 File: bram_sd.v
+# ** Warning: (vsim-3015) Fetch.v(216): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: _latency.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_yxint_valid File: _latency.v
+# ** Warning: (vsim-3015) Fetch_tb.v(94): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: interpolator_raw.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uitp File: interpolator_raw.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: niqiw  Hostname: NQ  ProcessID: 11972
+# 
+#           Attempting to use alternate WLF file "./wlftx320j6".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftx320j6
+# 
+# Open Successfully
+# 
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 14:26:26 on Nov 22,2018
+# vlog -reportprogress 300 -work work CoordinateGen_2.v Fetch.v Fetch_tb.v Img_Buf.v _latency.v bram_sd.v frac_latency.v interpolator_raw.v sim_lut.v sim_video_307200.v sim_video_uncontinute.v 
+# -- Compiling module CoordinateGen_2
+# -- Compiling module Fetch
+# -- Compiling module test
+# -- Compiling module Img_Buf
+# -- Compiling module _latency
+# -- Compiling module bram_sd
+# -- Compiling module frac_latency
+# -- Compiling module interpolator_raw
+# -- Compiling module sim_lut
+# -- Compiling module sim_video_307200
+# -- Compiling module sim_video_uncon
+# 
+# Top level modules:
+# 	test
+# 	sim_video_uncon
+# End time: 14:26:27 on Nov 22,2018, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 14:26:27 on Nov 22,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "Fetch(fast)".
+# 
+# Loading work.test(fast)
+# Loading work.Fetch(fast)
+# Loading work.Img_Buf(fast)
+# Loading work.bram_sd(fast)
+# Loading work._latency(fast)
+# Loading work.frac_latency(fast)
+# Loading work.interpolator_raw(fast)
+# Loading work._latency(fast__1)
+# Loading work.sim_video_307200(fast)
+# Loading work.sim_lut(fast)
+# Loading work.CoordinateGen_2(fast)
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'wx'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'wy'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'rx'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'ry'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Img_Buf.v(169): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram1 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(183): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram2 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(197): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram3 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(211): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram4 File: bram_sd.v
+# ** Warning: (vsim-3015) Fetch.v(215): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: _latency.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_yxint_valid File: _latency.v
+# ** Warning: (vsim-3015) Fetch_tb.v(94): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: interpolator_raw.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uitp File: interpolator_raw.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: niqiw  Hostname: NQ  ProcessID: 11972
+# 
+#           Attempting to use alternate WLF file "./wlfthzenyz".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlfthzenyz
+# 
+# Open Successfully
+# 
+
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 15:16:37 on Nov 22,2018
+# vlog -reportprogress 300 -work work CoordinateGen_2.v Fetch.v Fetch_tb.v Img_Buf.v _latency.v bram_sd.v frac_latency.v interpolator_raw.v rectify.v sim_lut.v sim_video_307200.v sim_video_uncontinute.v 
+# -- Compiling module CoordinateGen_2
+# -- Compiling module Fetch
+# -- Compiling module test
+# -- Compiling module Img_Buf
+# -- Compiling module _latency
+# -- Compiling module bram_sd
+# -- Compiling module frac_latency
+# -- Compiling module interpolator_raw
+# -- Compiling module rectify
+# -- Compiling module sim_lut
+# -- Compiling module sim_video_307200
+# -- Compiling module sim_video_uncon
+# ** Error: End of source encountered before `endif directive closing region starting at file 'rectify.v' line 7.
+# End time: 15:16:37 on Nov 22,2018, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: C:/modeltech64_10.4/win64/vlog failed.
+# Error in macro ./sim.tcl line 9
+# C:/modeltech64_10.4/win64/vlog failed.
+#     while executing
+# "vlog -work work *.v"
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 15:17:37 on Nov 22,2018
+# vlog -reportprogress 300 -work work CoordinateGen_2.v Fetch.v Fetch_tb.v Img_Buf.v _latency.v bram_sd.v frac_latency.v interpolator_raw.v rectify.v sim_lut.v sim_video_307200.v sim_video_uncontinute.v 
+# -- Compiling module CoordinateGen_2
+# -- Compiling module Fetch
+# -- Compiling module test
+# -- Compiling module Img_Buf
+# -- Compiling module _latency
+# -- Compiling module bram_sd
+# -- Compiling module frac_latency
+# -- Compiling module interpolator_raw
+# -- Compiling module rectify
+# -- Compiling module sim_lut
+# -- Compiling module sim_video_307200
+# -- Compiling module sim_video_uncon
+# 
+# Top level modules:
+# 	test
+# 	rectify
+# 	sim_video_uncon
+# End time: 15:17:37 on Nov 22,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 15:17:38 on Nov 22,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# ** Warning: Fetch_tb.v(69): (vopt-2685) [TFMPC] - Too few port connections for 'uF'.  Expected 20, found 18.
+# 
+# ** Warning: Fetch_tb.v(69): (vopt-2718) [TFMPC] - Missing connection for port 'ptready'.
+# 
+# ** Warning: Fetch_tb.v(69): (vopt-2718) [TFMPC] - Missing connection for port 'Fsync'.
+# 
+# Loading work.test(fast)
+# Loading work.Fetch(fast)
+# Loading work.Img_Buf(fast)
+# Loading work.bram_sd(fast)
+# Loading work._latency(fast)
+# Loading work.frac_latency(fast)
+# Loading work.interpolator_raw(fast)
+# Loading work._latency(fast__1)
+# Loading work.sim_video_307200(fast)
+# Loading work.sim_lut(fast)
+# Loading work.CoordinateGen_2(fast)
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'wx'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'wy'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'rx'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'ry'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Img_Buf.v(169): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram1 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(183): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram2 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(197): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram3 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(211): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram4 File: bram_sd.v
+# ** Warning: (vsim-3015) Fetch.v(215): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: _latency.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_yxint_valid File: _latency.v
+# ** Warning: (vsim-3015) Fetch_tb.v(96): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: interpolator_raw.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uitp File: interpolator_raw.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: niqiw  Hostname: NQ  ProcessID: 11972
+# 
+#           Attempting to use alternate WLF file "./wlftk5jezf".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftk5jezf
+# 
+# Open Successfully
+# 
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 15:21:23 on Nov 22,2018
+# vlog -reportprogress 300 -work work CoordinateGen_2.v Fetch.v Fetch_tb.v Img_Buf.v _latency.v bram_sd.v frac_latency.v interpolator_raw.v rectify.v sim_lut.v sim_video_307200.v sim_video_uncontinute.v 
+# -- Compiling module CoordinateGen_2
+# -- Compiling module Fetch
+# -- Compiling module test
+# -- Compiling module Img_Buf
+# -- Compiling module _latency
+# -- Compiling module bram_sd
+# -- Compiling module frac_latency
+# -- Compiling module interpolator_raw
+# -- Compiling module rectify
+# -- Compiling module sim_lut
+# -- Compiling module sim_video_307200
+# -- Compiling module sim_video_uncon
+# 
+# Top level modules:
+# 	test
+# 	rectify
+# 	sim_video_uncon
+# End time: 15:21:23 on Nov 22,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 15:21:23 on Nov 22,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# ** Warning: Fetch_tb.v(69): (vopt-2685) [TFMPC] - Too few port connections for 'uF'.  Expected 20, found 18.
+# 
+# ** Warning: Fetch_tb.v(69): (vopt-2718) [TFMPC] - Missing connection for port 'ptready'.
+# 
+# ** Warning: Fetch_tb.v(69): (vopt-2718) [TFMPC] - Missing connection for port 'Fsync'.
+# 
+# Loading work.test(fast)
+# Loading work.Fetch(fast)
+# Loading work.Img_Buf(fast)
+# Loading work.bram_sd(fast)
+# Loading work._latency(fast)
+# Loading work.frac_latency(fast)
+# Loading work.interpolator_raw(fast)
+# Loading work._latency(fast__1)
+# Loading work.sim_video_307200(fast)
+# Loading work.sim_lut(fast)
+# Loading work.CoordinateGen_2(fast)
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'wx'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'wy'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'rx'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'ry'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Img_Buf.v(169): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram1 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(183): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram2 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(197): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram3 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(211): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram4 File: bram_sd.v
+# ** Warning: (vsim-3015) Fetch.v(215): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: _latency.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_yxint_valid File: _latency.v
+# ** Warning: (vsim-3015) Fetch_tb.v(96): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: interpolator_raw.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uitp File: interpolator_raw.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: niqiw  Hostname: NQ  ProcessID: 11972
+# 
+#           Attempting to use alternate WLF file "./wlftzt17mc".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlftzt17mc
+# 
+# Open Successfully
+# 
+add wave -position insertpoint  \
+sim:/test/reclast
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf F:/TEST/Graduation_Rectify/temp/wave.do
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf F:/TEST/Graduation_Rectify/temp/wave.do
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 15:23:58 on Nov 22,2018
+# vlog -reportprogress 300 -work work CoordinateGen_2.v Fetch.v Fetch_tb.v Img_Buf.v _latency.v bram_sd.v frac_latency.v interpolator_raw.v rectify.v sim_lut.v sim_video_307200.v sim_video_uncontinute.v 
+# -- Compiling module CoordinateGen_2
+# -- Compiling module Fetch
+# -- Compiling module test
+# -- Compiling module Img_Buf
+# -- Compiling module _latency
+# -- Compiling module bram_sd
+# -- Compiling module frac_latency
+# -- Compiling module interpolator_raw
+# -- Compiling module rectify
+# -- Compiling module sim_lut
+# -- Compiling module sim_video_307200
+# -- Compiling module sim_video_uncon
+# 
+# Top level modules:
+# 	test
+# 	rectify
+# 	sim_video_uncon
+# End time: 15:23:58 on Nov 22,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 15:23:59 on Nov 22,2018
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# 
+# Loading work.test(fast)
+# Loading work.Fetch(fast)
+# Loading work.Img_Buf(fast)
+# Loading work.bram_sd(fast)
+# Loading work._latency(fast)
+# Loading work.frac_latency(fast)
+# Loading work.interpolator_raw(fast)
+# Loading work._latency(fast__1)
+# Loading work.sim_video_307200(fast)
+# Loading work.sim_lut(fast)
+# Loading work.CoordinateGen_2(fast)
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'wx'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'wy'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'rx'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'ry'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Img_Buf.v(169): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram1 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(183): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram2 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(197): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram3 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(211): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_BUF/Bram4 File: bram_sd.v
+# ** Warning: (vsim-3015) Fetch.v(215): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: _latency.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uF/u_yxint_valid File: _latency.v
+# ** Warning: (vsim-3015) Fetch_tb.v(96): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: interpolator_raw.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /test/uitp File: interpolator_raw.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: niqiw  Hostname: NQ  ProcessID: 11972
+# 
+#           Attempting to use alternate WLF file "./wlfthe99nj".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlfthe99nj
+# 
+# Open Successfully
+# 
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 15:30:46 on Nov 22,2018
+# vlog -reportprogress 300 -work work CoordinateGen_2.v Fetch.v Img_Buf.v _latency.v bram_sd.v frac_latency.v interpolator_raw.v rectify.v rectify_tb.v sim_lut.v sim_video_307200.v sim_video_uncontinute.v 
+# -- Compiling module CoordinateGen_2
+# -- Compiling module Fetch
+# -- Compiling module Img_Buf
+# -- Compiling module _latency
+# -- Compiling module bram_sd
+# -- Compiling module frac_latency
+# -- Compiling module interpolator_raw
+# -- Compiling module rectify
+# -- Compiling module test
+# -- Compiling module sim_lut
+# -- Compiling module sim_video_307200
+# -- Compiling module sim_video_uncon
+# 
+# Top level modules:
+# 	test
+# 	sim_video_uncon
+# End time: 15:30:46 on Nov 22,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 15:30:47 on Nov 22,2018
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# ** Error (suppressible): (vopt-2732) rectify_tb.v(69): Module parameter 'img_width' not found for override.
+# 
+# Optimization failed
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim.tcl PAUSED at line 11
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 15:31:21 on Nov 22,2018
+# vlog -reportprogress 300 -work work CoordinateGen_2.v Fetch.v Img_Buf.v _latency.v bram_sd.v frac_latency.v interpolator_raw.v rectify.v rectify_tb.v sim_lut.v sim_video_307200.v sim_video_uncontinute.v 
+# -- Compiling module CoordinateGen_2
+# -- Compiling module Fetch
+# -- Compiling module Img_Buf
+# -- Compiling module _latency
+# -- Compiling module bram_sd
+# -- Compiling module frac_latency
+# -- Compiling module interpolator_raw
+# -- Compiling module rectify
+# -- Compiling module test
+# -- Compiling module sim_lut
+# -- Compiling module sim_video_307200
+# -- Compiling module sim_video_uncon
+# 
+# Top level modules:
+# 	test
+# 	sim_video_uncon
+# End time: 15:31:21 on Nov 22,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 15:31:21 on Nov 22,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Error: rectify_tb.v(67): (vopt-2912) Port 'dout_valid' not found in module 'rectify' (11th connection).
+# 
+# ** Error: rectify_tb.v(67): (vopt-2912) Port 'dout_last' not found in module 'rectify' (12th connection).
+# 
+# ** Error: rectify_tb.v(67): (vopt-2912) Port 'p' not found in module 'rectify' (13th connection).
+# 
+# Optimization failed
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./sim.tcl PAUSED at line 11
+do sim.tcl
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable simprims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unimacro_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisim are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable unisims_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# ** Warning: Multiple occurences of ini variable xilinxcorelib_ver are found, only first occurence will be considered.
+# Model Technology ModelSim SE-64 vmap 10.4 Lib Mapping Utility 2014.12 Dec  3 2014
+# vmap -modelsim_quiet work ./work 
+# Modifying C:/modeltech64_10.4/win64/../modelsim.ini
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 15:33:22 on Nov 22,2018
+# vlog -reportprogress 300 -work work CoordinateGen_2.v Fetch.v Img_Buf.v _latency.v bram_sd.v frac_latency.v interpolator_raw.v rectify.v rectify_tb.v sim_lut.v sim_video_307200.v sim_video_uncontinute.v 
+# -- Compiling module CoordinateGen_2
+# -- Compiling module Fetch
+# -- Compiling module Img_Buf
+# -- Compiling module _latency
+# -- Compiling module bram_sd
+# -- Compiling module frac_latency
+# -- Compiling module interpolator_raw
+# -- Compiling module rectify
+# -- Compiling module test
+# -- Compiling module sim_lut
+# -- Compiling module sim_video_307200
+# -- Compiling module sim_video_uncon
+# 
+# Top level modules:
+# 	test
+# 	sim_video_uncon
+# End time: 15:33:22 on Nov 22,2018, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 15:33:22 on Nov 22,2018
+# ** Note: (vsim-3812) Design is being optimized...
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "Fetch(fast)".
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "sim_video_307200(fast)".
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "sim_lut(fast)".
+# 
+# ** Warning: rectify.v(53): (vopt-2685) [TFMPC] - Too few port connections for 'uF'.  Expected 20, found 18.
+# 
+# ** Warning: rectify.v(53): (vopt-2718) [TFMPC] - Missing connection for port 'ptready'.
+# 
+# ** Warning: rectify.v(53): (vopt-2718) [TFMPC] - Missing connection for port 'Fsync'.
+# 
+# Loading work.test(fast)
+# Loading work.rectify(fast)
+# Loading work.Fetch(fast)
+# Loading work.Img_Buf(fast)
+# Loading work.bram_sd(fast)
+# Loading work._latency(fast)
+# Loading work.frac_latency(fast)
+# Loading work.interpolator_raw(fast)
+# Loading work._latency(fast__1)
+# Loading work.CoordinateGen_2(fast)
+# Loading work.sim_video_307200(fast)
+# Loading work.sim_lut(fast)
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'wx'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/urec/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'wy'. The port definition is at: Img_Buf.v(30).
+#    Time: 0 ps  Iteration: 0  Instance: /test/urec/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'rx'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/urec/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Fetch.v(195): [PCDPC] - Port size (10) does not match connection size (11) for port 'ry'. The port definition is at: Img_Buf.v(31).
+#    Time: 0 ps  Iteration: 0  Instance: /test/urec/uF/u_BUF File: Img_Buf.v
+# ** Warning: (vsim-3015) Img_Buf.v(169): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/urec/uF/u_BUF/Bram1 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(183): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/urec/uF/u_BUF/Bram2 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(197): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/urec/uF/u_BUF/Bram3 File: bram_sd.v
+# ** Warning: (vsim-3015) Img_Buf.v(211): [PCDPC] - Port size (1) does not match connection size (32) for port 're'. The port definition is at: bram_sd.v(32).
+#    Time: 0 ps  Iteration: 0  Instance: /test/urec/uF/u_BUF/Bram4 File: bram_sd.v
+# ** Warning: (vsim-3015) Fetch.v(215): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: _latency.v(28).
+#    Time: 0 ps  Iteration: 0  Instance: /test/urec/uF/u_yxint_valid File: _latency.v
+# ** Warning: (vsim-3015) rectify.v(80): [PCDPC] - Port size (1) does not match connection size (32) for port 'clk_en'. The port definition is at: interpolator_raw.v(29).
+#    Time: 0 ps  Iteration: 0  Instance: /test/urec/uitp File: interpolator_raw.v
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+# 
+#           File in use by: niqiw  Hostname: NQ  ProcessID: 11972
+# 
+#           Attempting to use alternate WLF file "./wlft184vt5".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+# 
+#           Using alternate file: ./wlft184vt5
+# 
+# Open Successfully
+# 
+# End time: 15:33:57 on Nov 22,2018, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 15

@@ -9,15 +9,16 @@ z2
 cModel Technology
 Z0 dF:/TEST/Graduation_Rectify/Fetch
 T_opt
-!s110 1542626779
-VblofNIzAHDU0LCLODN[e03
+!s110 1542770041
+VZczIIdJ<LV4MELW^Lhjz03
 04 4 4 work test fast 0
-=1-2089848c219c-5bf29ddb-2ed-4198
+=1-2089848c219c-5bf4cd79-227-2504
 o-quiet -auto_acc_if_foreign -work work +acc
 n@_opt
 OL;O;10.4;61
+R0
 vbram_sd
-Z1 !s110 1542626778
+Z1 !s110 1542866256
 !i10b 1
 !s100 zQWPDl5[gR30]c;]K`a;E2
 IUGWnSlR5iC3m0V;iI8>5?3
@@ -26,115 +27,156 @@ R0
 w1535364298
 8bram_sd.v
 Fbram_sd.v
-L0 23
-Z3 OL;L;10.4;61
+Z3 L0 23
+Z4 OL;L;10.4;61
 r1
 !s85 0
 31
-Z4 !s108 1542626777.969000
-Z5 !s107 sim_video.v|sim_lut.v|bram_sd.v|Img_Buf.v|Fetch_tb.v|Fetch.v|
-Z6 !s90 -reportprogress|300|-work|work|Fetch.v|Fetch_tb.v|Img_Buf.v|bram_sd.v|sim_lut.v|sim_video.v|
+Z5 !s108 1542866255.916000
+Z6 !s107 sim_video_307200.v|sim_lut.v|frac_latency.v|bram_sd.v|Img_Buf.v|Fetch_tb.v|Fetch.v|CoordinateGen_2.v|
+Z7 !s90 -reportprogress|300|-work|work|CoordinateGen_2.v|Fetch.v|Fetch_tb.v|Img_Buf.v|bram_sd.v|frac_latency.v|sim_lut.v|sim_video_307200.v|
 !i113 0
-Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vCoordinateGen_2
+R1
+!i10b 1
+!s100 @:7>ae@E6PdbI8nX:Hb6m0
+IBYA7@f]A8Kj1C?17hbAYz2
+R2
+R0
+w1542629894
+8CoordinateGen_2.v
+FCoordinateGen_2.v
+R3
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+n@coordinate@gen_2
 vFetch
 R1
 !i10b 1
-!s100 M^YB>:Xb]1hei6IVnk^6R0
-IS_6BF9gEOBPNGe<hHk@Q`0
+!s100 249c4FaY@<b_hCkm:2lA>1
+Ia=In<m<R10K65cZLa?X>P2
 R2
 R0
-w1542626767
+w1542783074
 8Fetch.v
 FFetch.v
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-R4
 R5
 R6
-!i113 0
 R7
+!i113 0
+R8
 n@fetch
 vImg_Buf
 R1
 !i10b 1
-!s100 NoS6oK;8o=797KW:`?c]H3
-ImdZOFdi[mTHl^8_AkQ@Lg0
+!s100 dIbklCTzb`m@9E5H;^0B10
+IW@PHHBSA:=6:_KE30:8b10
 R2
 R0
-w1542442715
+w1542866223
 8Img_Buf.v
 FImg_Buf.v
 L0 22
-R3
+R4
 r1
 !s85 0
 31
-R4
 R5
 R6
-!i113 0
 R7
+!i113 0
+R8
 n@img_@buf
 vsim_lut
-R1
+Z9 !s110 1542770039
 !i10b 1
-!s100 8lYC<_:8b@dORnc3LIVLH2
-I1ZI@naWi6m=7LUQ8gmTCD3
+!s100 zC]G2^T1[OY5GgHDOoKFB3
+IId<U7]4SPTWQlPF_ZFcKU0
 R2
 R0
-w1542537503
+w1542769979
 8sim_lut.v
 Fsim_lut.v
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-R4
-R5
-R6
+Z10 !s108 1542770039.572000
+Z11 !s107 sim_video_uncontinute.v|sim_video_307200.v|sim_lut.v|bram_sd.v|Img_Buf.v|Fetch_tb.v|Fetch.v|CoordinateGen_2.v|
+Z12 !s90 -reportprogress|300|-work|work|CoordinateGen_2.v|Fetch.v|Fetch_tb.v|Img_Buf.v|bram_sd.v|sim_lut.v|sim_video_307200.v|sim_video_uncontinute.v|
 !i113 0
-R7
-vsim_video
-R1
+R8
+vsim_video_307200
+R9
 !i10b 1
-!s100 fInnRhTR`L;l;fVi8:g=^1
-I>F1ZPn?8Qel;;KUjkHzM`0
+!s100 22X5_KY7a@A;J`3h8XdWf3
+I`X_]m8RDz:bAg[ha5fZiX1
 R2
 R0
-w1542615719
-8sim_video.v
-Fsim_video.v
+w1542694162
+8sim_video_307200.v
+Fsim_video_307200.v
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-R4
-R5
-R6
+R10
+R11
+R12
 !i113 0
-R7
+R8
+vsim_video_uncon
+R9
+!i10b 1
+!s100 Da3:bn;@gfTXZLXB=DQ3g3
+I5jZa>5Z?e9[Yic0?nHfLG1
+R2
+R0
+w1542675043
+8sim_video_uncontinute.v
+Fsim_video_uncontinute.v
+L0 3
+R4
+r1
+!s85 0
+31
+R10
+R11
+R12
+!i113 0
+R8
 vtest
 R1
 !i10b 1
-!s100 UFN=VoH[EKF9>FnKHQZ>C1
-I:0=<diEP1>`gPzlo4cOD70
+!s100 BfWm1QNI;BNA1:D5gK[df2
+I]QEhTc=CGnHlM7g]^m0XH2
 R2
 R0
-w1542618198
+w1542770025
 8Fetch_tb.v
 FFetch_tb.v
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-R4
 R5
 R6
-!i113 0
 R7
+!i113 0
+R8

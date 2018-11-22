@@ -3,25 +3,25 @@
 module sim_lut
 (
     input clk,rst,start,
-    output reg [7:0] ltdata,
+    output reg [31:0] ltdata,
     output reg ltvalid,
     output reg ltlast,
     input ltready
 );
 
 //write logic
-reg [7:0] mem [0:159];
-reg [0:0] mem_last [0:159];
+reg [31:0] mem [0:307199];
+reg [0:0] mem_last [0:307199];
 integer i;
 initial begin
-    $readmemh("./SIGNED HEX_LUT.txt",mem);
-    for(i=0;i<160;i=i+1)
+    $readmemh("./HEX_LUT32bit.txt",mem);
+    for(i=0;i<307200;i=i+1)
         mem_last[i] = 0;
-    mem_last[159] = 1;
+    mem_last[307199] = 1;
 end
 
 
-reg [7:0] rd_addr;
+reg [31:0] rd_addr;
 //read logic
 
 reg addr_updata_en;

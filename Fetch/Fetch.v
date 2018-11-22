@@ -1,7 +1,8 @@
 `timescale 1ns / 1ps
 
 module Fetch #(
-   parameter img_width = 16
+    parameter img_width = 640,
+    parameter BUF_height = 60
 ) 
 (
     input clk, rst,
@@ -11,21 +12,26 @@ module Fetch #(
     input [7:0] vtdata,
     input vtvalid,
     input vtlast,
-    output vtready,
+    output reg vtready,
     
     //LUT interface / AXI stream slave
-    input [7:0] ltdata,
+    input [31:0] ltdata,
     input ltvalid,
     input ltlast,
     output reg ltready,
 
-    //output
-    output [7:0] lu,ru,ld,rd
+    //output interface
+    output [7:0] lu,ru,ld,rd,
+    output [5:0] yfrac, xfrac,
+    output ptlast,
+    output ptvalid,
+    input ptready
+    
 );
-localparam BUF_height = 6;
-//write pointer begin
+
+//write pointer begin -----------------------------
 wire buf_we;
-reg [9:0] wy_pointer, wx_pointer;
+reg [10:0] wy_pointer, wx_pointer;
 always @ (posedge clk) begin
     if(rst) begin
         wy_pointer <= 0;
@@ -38,15 +44,15 @@ always @ (posedge clk) begin
         end
     end
 end
-assign vtready = 1;
-assign buf_we = vtvalid && vtready;
-//write pointer end
 
-//read pointer begin
+assign buf_we = vtvalid && vtready;
+//write pointer end %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+//read pointer begin -----------------------------
 localparam Base_ry = 4,
            Base_rx = 0;
-reg [9:0] ry_pointer, rx_pointer;
-reg [9:0] ry, rx;
+reg [10:0] ry_pointer, rx_pointer;
+reg [10:0] ry, rx;
 reg rp_inc_en;//read pointer increasing enable
 reg rp_clr;
 always @ (posedge clk) begin
@@ -62,15 +68,17 @@ always @ (posedge clk) begin
     end
 end
 
-//read control FSM begin
+//read control FSM begin -----------------------------
 localparam IDEL = 0,
            READ = 1,
            READ_TAIL = 2,
            DONE = 7;
 reg [3:0]state;
-wire [9:0] yint, xint;
-assign yint = $signed(ltdata[7:4]);
-assign xint = $signed(ltdata[3:0]);
+reg bram_ren;
+wire [10:0] yint, xint;
+assign yint = $signed(ltdata[15:8]);
+assign xint = $signed(ltdata[7:0]);
+
 always @ (posedge clk) begin
     if(rst) begin
         state <= IDEL;
@@ -79,7 +87,7 @@ always @ (posedge clk) begin
     else begin
         case(state)
             IDEL: begin
-                if(wy_pointer==3 && wx_pointer==7) begin
+                if(wy_pointer==34 && wx_pointer==320) begin
                     state <= READ;
                 end
             end
@@ -90,7 +98,7 @@ always @ (posedge clk) begin
                 
             end
             READ_TAIL: begin
-                if(ry_pointer==3 && rx_pointer==14) begin
+                if(ry_pointer==0 && rx_pointer==1) begin
                     state <= DONE;
                 end
             end
@@ -100,35 +108,41 @@ always @ (posedge clk) begin
     end
 end
 always @ * begin
+        vtready = 0;
         ltready = 0;
+        bram_ren = 0;
+        rp_inc_en = 0;
+        rp_clr = 0;
         case(state)
             IDEL: begin
                 rp_inc_en = 0;
                 rp_clr = 1;
+                vtready = 1;
             end
             READ: begin
+                vtready = ltvalid;
                 rp_inc_en = (vtready && vtvalid);
                 rp_clr = 0;
                 ltready = (vtready && vtvalid);
+                bram_ren = (vtready && vtvalid);
             end
             READ_TAIL: begin
                 rp_inc_en = 1;
+                bram_ren = 1;
                 rp_clr = 0;
+                ltready = 1;
+                vtready = 0;
             end
             DONE: begin
                 rp_inc_en = 0;
                 rp_clr = 0;
             end
-            default: begin
-                rp_inc_en = 1'bx;
-                rp_clr = 1'bx;
-            end
         endcase
 end
 
-wire signed [9:0] temp_ry;
+wire signed [10:0] temp_ry;
 assign temp_ry = ry_pointer + yint;
-wire signed [9:0] temp_rx;
+wire signed [10:0] temp_rx;
 assign temp_rx = rx_pointer + xint;
 always @ * begin
     if(temp_ry>(BUF_height-1))
@@ -146,11 +160,33 @@ always @ * begin
         rx = temp_rx;
 end
 
-//read control FSM end
+
+//read control FSM end %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+//read pointer end %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+//output logic begin -----------------------------
+reg [1:0] read_latency_0,read_latency_1,read_latency_2;
+always @(posedge clk) begin
+    if(rst) begin
+        read_latency_0 <= 0;
+        read_latency_1 <= 0;
+        read_latency_2 <= 0;
+    end
+    else begin
+        read_latency_0[0] <= bram_ren;
+        read_latency_0[1] <= (ltready && ltlast && ltvalid);
+        read_latency_1 <= read_latency_0;
+        read_latency_2 <= read_latency_1;
+    end
+end
+assign ptvalid = read_latency_1[0];
+assign ptlast = read_latency_1[1];
+
+//output logic end   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
-//read pointer end
 
 Img_Buf 
 #(
@@ -170,6 +206,28 @@ u_BUF
     .ru(ru),
     .ld(ld),
     .rd(rd)
+);
+
+frac_latency #(
+    .Latency(2),
+    .DATA_Width(6)
+) ufy
+(
+    .clk(clk),
+    .rst(rst),
+    .din(ltdata[29:24]),
+    .dout(yfrac)
+);
+
+frac_latency #(
+    .Latency(2),
+    .DATA_Width(6)
+) ufx
+(
+    .clk(clk),
+    .rst(rst),
+    .din(ltdata[21:16]),
+    .dout(xfrac)
 );
 
 

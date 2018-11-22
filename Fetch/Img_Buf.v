@@ -32,8 +32,8 @@ module Img_Buf #(
     output reg [7:0] lu,ru,ld,rd //4 pixels used in interpoloation l:light r:right u:up d:down
 );
 localparam half_img_width = img_width/2;
-localparam mem_depth = img_width*img_height;
-localparam addr_width = 10;
+localparam mem_depth = img_width*img_height/4;
+localparam addr_width = 32;
 wire [addr_width-1 : 0] waddr;
 reg [addr_width-1 : 0] raddr1,raddr2,raddr3,raddr4;
 wire we1, we2, we3, we4;
@@ -41,7 +41,7 @@ wire [7:0] dout1, dout2, dout3, dout4;
 
 //write logic begin
 function iseven;
-    input [9:0] a;
+    input [addr_width-1 :0] a;
     iseven = a[0]==0;
 endfunction
 

@@ -28,11 +28,16 @@ initial begin
     
     repeat(5) @(posedge clk);
     sv_start <= #(Tc2o) 1;
+    sl_start <= #(Tc2o) 0;
+    @(posedge clk);
+    sv_start <= #(Tc2o) 0;
+    sl_start <= #(Tc2o) 0;
+    repeat(355) @(posedge clk);
+    sv_start <= #(Tc2o) 0;
     sl_start <= #(Tc2o) 1;
     @(posedge clk);
     sv_start <= #(Tc2o) 0;
     sl_start <= #(Tc2o) 0;
-
 
 end
 
@@ -43,14 +48,19 @@ wire vtvalid;
 wire vtlast;
 wire vtready;
 
-wire [7:0] ltdata;
+wire [31:0] ltdata;
 wire ltvalid;
 wire ltlast;
 wire ltready;
 
+wire ptvalid;
+
+
+wire [9:0] py,px;
+
 
 Fetch 
-#(.img_width(16))
+#(.img_width(640))
 uF
 (
     .clk(clk),
@@ -70,11 +80,12 @@ uF
     .lu(lu),
     .ru(ru),
     .ld(ld),
-    .rd(rd)
+    .rd(rd),
+    .ptvalid(ptvalid)
 );
 
 
-sim_video sv
+sim_video_307200 sv
 (
     .start(sv_start),
     .clk(clk),
@@ -94,6 +105,19 @@ sim_lut sl
     .ltvalid(ltvalid),
     .ltlast(ltlast),
     .ltready(ltready)
+);
+
+
+CoordinateGen_2 #(
+    .ROW(480),
+    .COL(640)
+) UCG
+(
+    .clk(clk),
+    .rst(rst),
+    .din_valid(ptvalid),
+    .col_cnt(px), 
+    .row_cnt(py)
 );
 
 

@@ -12,3 +12,4 @@ vsim -voptargs=+acc    work.test
 do wave.do
 run 1us
 run 4us
+run 4ms

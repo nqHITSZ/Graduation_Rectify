@@ -1,9 +1,10 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
-add wave -noupdate /test/uF/clk
 add wave -noupdate /test/uF/rst
 add wave -noupdate /test/uF/Fsync
-add wave -noupdate /test/uF/vtdata
+add wave -noupdate -radix unsigned /test/uF/wy_pointer
+add wave -noupdate -radix unsigned /test/uF/wx_pointer
+add wave -noupdate -radix unsigned /test/uF/vtdata
 add wave -noupdate /test/uF/vtvalid
 add wave -noupdate /test/uF/vtlast
 add wave -noupdate /test/uF/vtready
@@ -11,13 +12,17 @@ add wave -noupdate /test/uF/ltdata
 add wave -noupdate /test/uF/ltvalid
 add wave -noupdate /test/uF/ltlast
 add wave -noupdate /test/uF/ltready
-add wave -noupdate /test/uF/lu
-add wave -noupdate /test/uF/ru
-add wave -noupdate /test/uF/ld
-add wave -noupdate /test/uF/rd
+add wave -noupdate -divider {New Divider}
+add wave -noupdate -radix unsigned /test/uF/lu
+add wave -noupdate -radix unsigned /test/uF/ru
+add wave -noupdate -radix unsigned /test/uF/ld
+add wave -noupdate -radix unsigned /test/uF/rd
+add wave -noupdate -color {Green Yellow} -radix unsigned /test/py
+add wave -noupdate -color {Green Yellow} -radix unsigned /test/px
+add wave -noupdate -color Orchid /test/uF/ptvalid
+add wave -noupdate /test/uF/ptlast
+add wave -noupdate -divider {New Divider}
 add wave -noupdate /test/uF/buf_we
-add wave -noupdate /test/uF/wy_pointer
-add wave -noupdate /test/uF/wx_pointer
 add wave -noupdate -color Turquoise /test/uF/ry_pointer
 add wave -noupdate -color Turquoise /test/uF/rx_pointer
 add wave -noupdate -color {Dark Orchid} -radix decimal /test/uF/yint
@@ -26,9 +31,10 @@ add wave -noupdate /test/uF/ry
 add wave -noupdate /test/uF/rx
 add wave -noupdate /test/uF/rp_inc_en
 add wave -noupdate /test/uF/rp_clr
-add wave -noupdate /test/uF/state
+add wave -noupdate -color Magenta /test/uF/state
 add wave -noupdate /test/uF/temp_ry
 add wave -noupdate /test/uF/temp_rx
+add wave -noupdate /test/uF/bram_ren
 add wave -noupdate -divider BRAM1
 add wave -noupdate {/test/uF/u_BUF/Bram1/mem[24]}
 add wave -noupdate {/test/uF/u_BUF/Bram1/mem[23]}
@@ -134,7 +140,7 @@ add wave -noupdate {/test/uF/u_BUF/Bram4/mem[2]}
 add wave -noupdate {/test/uF/u_BUF/Bram4/mem[1]}
 add wave -noupdate {/test/uF/u_BUF/Bram4/mem[0]}
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {2622447 ps} 0}
+WaveRestoreCursors {{Cursor 1} {3068015000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 150
 configure wave -valuecolwidth 100
@@ -150,4 +156,4 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ms
 update
-WaveRestoreZoom {2415413 ps} {2932247 ps}
+WaveRestoreZoom {3065427545 ps} {3069534235 ps}
